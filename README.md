@@ -32,9 +32,6 @@
 
 # CONTEXTE
 # ========
-# L'application de gestion des dossiers patients utilise trois bases de données :
-# OCADMIN_DBO : Stocke les données sur l'identification des patients ainsi que des données statiques comme les classifications des maladies, les pays, etc.
-# OPENCLINIC_DBO : Stocke les données cliniques et contient des vues des tables de la base de données OCADMIN_DBO.
 # Lorsque des structures de soins migrent vers la digitalisation des données et que leurs données sont initialement dans des fichiers Excel, il est impératif de pouvoir importer ces données dans les tables correspondantes après avoir adapté les colonnes Excel aux colonnes des tables des bases de données et les transformer en fichiers CSV (séparateur point-virgule).
 
 # REQUÊTES
