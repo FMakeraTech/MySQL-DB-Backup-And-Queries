@@ -17,3 +17,12 @@ REM export the 3 databases
 "C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump.exe" --host 192.168.1.27 -P 3306 -u root ocadmin_dbo > "C:\backups\ocadmin_dbo.%TIMESTAMP%.sql" 
 "C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump.exe" --host 192.168.1.27 -P 3306 -u root openclinic_dbo > "C:\backups\openclinic_dbo.%TIMESTAMP%.sql" 
 "C:\Program Files\MySQL\MySQL Server 5.7\bin\mysqldump.exe" --host 192.168.1.27 -P 3306 -u root ocstats_dbo > "C:\backups\ocstats_dbo.%TIMESTAMP%.sql" 
+
+REM Change working directory to the location of the DB dump file to.
+C:
+CD C:\backups\
+
+REM Compression of the DB dump files into CAB files
+MAKECAB "ocadmin_dbo.%TIMESTAMP%.sql" "ocadmin_dbo.%TIMESTAMP%.sql.cab"
+MAKECAB "openclinic_dbo.%TIMESTAMP%.sql" "openclinic_dbo.%TIMESTAMP%.sql.cab"
+MAKECAB "ocstats_dbo.%TIMESTAMP%.sql" "ocstats_dbo.%TIMESTAMP%.sql.cab"
