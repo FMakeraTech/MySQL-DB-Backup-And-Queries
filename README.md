@@ -53,6 +53,7 @@
 
 # CONTEXTE
 # ========
+# Le fichier query contient quelques requetes pour l'analyse des données
 # Les tables items, transactions, healthrecord sont des tables de la base de donnees OPENCLINIC_DBO
 # adminview et privateview sont des views de la base de donnees OCADMIN_DBO dans OPENCLINIC_DBO
 # adminview : contient l'identification du patients (personid, firstname, lastname, ddn, gender)
