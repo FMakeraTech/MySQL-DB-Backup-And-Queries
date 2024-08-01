@@ -45,3 +45,27 @@
 # La quatrième requête supprime la table provisoire qui n'est plus nécessaire.
 
 # La cinquième requête importe directement la liste des données en CSV dans une table de la base de données openclinic_dbo sans passer par une table provisoire puisque le fichier CSV contient les mêmes colonnes que la table de la base de données.
+
+
+# 3. FICHIER: query.sql
+# =====================
+# =====================
+
+# CONTEXTE
+# ========
+# Les tables items, transactions, healthrecord sont des tables de la base de donnees OPENCLINIC_DBO
+# adminview et privateview sont des views de la base de donnees OCADMIN_DBO dans OPENCLINIC_DBO
+# adminview : contient l'identification du patients (personid, firstname, lastname, ddn, gender)
+# privateview (avec personid de adminview comme cle etrangere ): contient les donnees privees qui peuvent changer (city, mobile, adress,.....)
+# healthrecord (avec personid de adminview comme cle etrangere ): Contient les dossiers patients. Chaque patient a un seul dossier dans HEALTHRECORD
+# transactions (avec healthrecordid comme cle etrangere): elle contient les documents cliniques des patients. Un patient peut avoir plusieurs documents cliniques et chaque document a un type (document de consultation, document de demande de laboratoire)
+# items (avec transactionid comme cle etrangere) : contient les differents champs ou enregistrement pour un seul document (anamnesis, diagnosis, symptom) et chaque item a un type et une valeur qui est l'information  saisi par le prestataire de soins
+
+# Un healthrecord peut etre lie a plusieurs transactions et Une transaction peut avoir beaucoup d'items et chaque item a une valeur
+
+
+# REQUÊTES
+# ========
+# La premiere requete sort la liste les patients qui ont ete consultes en 2023
+# La deuxieme requete sort le nombre de patients de mois de 5 ans qui ont ete consulte en 2023 et qui presente comme symptome la fievre
+# La troisieme requete regroupe les patients consultes en 2023 par pathologie et affiche le nombre pour chaque pathologie
