@@ -1,8 +1,8 @@
 # MySQL-DB-Backup-And-Queries
 
-# 1. FICHIER : mysql-backup.bat ==============================================
-#    =========================================================================
-#    =========================================================================
+# 1. FICHIER : mysql-backup.bat 
+# =============================
+# =============================
 # Le fichier mysql-backup.bat contient des scripts pour effectuer une sauvegarde de bases de données
 
 # CONTEXTE
